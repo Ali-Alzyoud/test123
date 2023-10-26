@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lunar - Free Bootstrap Modal and Popups</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.moengage.com/inapp/html-template1/assets/bootstrap/css/bootstrap.min.css"
+    />
+    <!-- Lunar CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.moengage.com/inapp/html-template1/assets/css/lunar.css"
+    />
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.moengage.com/inapp/html-template1/assets/css/animate.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:600"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.moengage.com/inapp/html-template1/assets/img/lunar.png"
+    />
+    <link
+      rel="icon"
+      href="https://cdn.moengage.com/inapp/html-template1/assets/img/lunar.png"
+      type="image/png"
+      sizes="16x16"
+    />
+  </head>
+
+  <!-- Paste this right before your closing </head> tag -->
+
+  <body class="modal-open">
+    <!-- Modal -->
+    <div
+      class="modal fade modal-bottom-center show"
+      id="demoModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="demoModal"
+      aria-hidden="true"
+      style="display: block"
+    >
+      <div
+        id="modal-dialog-override"
+        class="modal-dialog modal-sm"
+        role="document"
+      >
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close size-sm light"
+            data-dismiss="modal"
+            aria-label="Close"
+            onclick="moengage.trackDismiss(); moengage.dismissMessage();"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-body bg-rhino px-sm-3 py-sm-3">
+            <div class="text-center pb-2">
+              <img
+                src="https://media.discordapp.net/attachments/1094645277450850357/1165991259278688318/HBq3BEJW_400x400-removebg-preview.png?ex=6548dcfb&is=653667fb&hm=5fbf61a8ef76e82d47b777ccd42eeed3d6348e923c675e06343cab098d290f80&=&width=684&height=684"
+                width="150"
+                alt=""
+              />
+            </div>
+            <h3 class="text-white text-center">!أهَلاً بك في كيورا</h3>
+            <p class="text-white-50 text-center">
+              ماهو هدفك الأساسي الذي تتوقع أن نساعدك في تحقيقه؟
+            </p>
+
+            <!-- Alert to provide insight of what happened-->
+            <div id="alert" class="alert d-none" role="alert"></div>
+
+            <ul class="list-group">
+              <div class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="customCheck1"
+                    class="custom-control-input"
+                    value="تحسين صحتي النّفسية"
+                  />
+                  <label class="custom-control-label" for="customCheck1"
+                    >تحسين صحتي النّفسية</label
+                  >
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="customCheck2"
+                    class="custom-control-input"
+                    value="خسارة الوزن"
+                  />
+                  <label class="custom-control-label" for="customCheck2"
+                    >خسارة الوزن</label
+                  >
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="customCheck3"
+                    class="custom-control-input"
+                    value="استشارة طبية"
+                  />
+                  <label class="custom-control-label" for="customCheck3"
+                    >عندي مشكلة صحية أود استشارة طبيب متخصص بشأنها</label
+                  >
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="customCheck4"
+                    class="custom-control-input"
+                    value="حالة صحية طارئة"
+                  />
+                  <label class="custom-control-label" for="customCheck4"
+                    >عندي حالة صحية طارئة</label
+                  >
+                </div>
+              </div>
+              <div class="list-group-item">
+                <div class="custom-control custom-checkbox">
+                  <input
+                    type="checkbox"
+                    id="customCheck5"
+                    class="custom-control-input"
+                    value="استكشاف"
+                  />
+                  <label class="custom-control-label" for="customCheck5"
+                    >أنا هنا للاستكشاف ومعرفة المزيد عن الخدمات</label
+                  >
+                </div>
+              </div>
+              <!-- Add additional checkboxes as needed -->
+            </ul>
+            <div class="pt-2 text-center">
+              <a
+                class="btn btn-cstm-light"
+                data-dismiss="modal"
+                aria-label="Close"
+                id="submitButton"
+                >تم</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Ends -->
+    <script src="https://cdn.moengage.com/inapp/html-template1/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.moengage.com/inapp/html-template1/assets/js/popper.min.js"></script>
+    <script src="https://cdn.moengage.com/inapp/html-template1/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const alert = document.getElementById("alert");
+
+        function submitSurvey() {
+          const checkedBoxes = document.querySelectorAll(
+            'input[type="checkbox"]:checked'
+          );
+          const values = Array.from(checkedBoxes).map((box) => box.value);
+
+          if (values.length === 0) {
+            displayMessage("warn");
+            return;
+          }
+
+          if (typeof moengage !== "undefined") {
+            moengage.trackClick();
+            moengage.trackEvent(
+              "MOE_RESPONSE_SUBMITTED",
+              { survey_response: values },
+              {},
+              {},
+              false,
+              true
+            );
+            moengage.setUserAttribute("survey_response", values);
+            moengage.dismissMessage();
+          } else {
+            console.error("MoEngage is not defined.");
+          }
+
+          const options = {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify([
+              {
+                $token: "3000fa75e462c29d78a1f12436032953",
+                $distinct_id: 59345,//getUserUUID(),
+                $set: {
+                  user_goals: values,
+                },
+              },
+            ]),
+          };
+
+          fetch("https://api.mixpanel.com/engage#profile-set", options)
+            .then((response) => {
+              if (response.ok) {
+                console.log(response);
+                console.log("Success");
+                displayMessage("success");
+              } else {
+                console.error(
+                  "Error sending data to Mixpanel:",
+                  response.status
+                );
+                displayMessage("danger");
+              }
+            })
+            .catch((error) => {
+              console.error("Error sending data to Mixpanel:", error);
+              displayMessage("danger");
+            });
+        }
+
+        const submitButton = document.getElementById("submitButton");
+        submitButton.addEventListener("click", submitSurvey);
+
+        function displayMessage(type) {
+          alert.classList.forEach((className) => {
+            if (className.startsWith("alert-")) {
+              alert.classList.remove(className);
+            }
+          });
+
+          if (type === "success") {
+            alert.classList.add("alert-success");
+            alert.classList.remove("d-none");
+            // Add success message here
+            alert.innerText = "Success";
+          } else if (type === "warn") {
+            console.warn("No option selected");
+            alert.classList.add("alert-warning");
+            alert.classList.remove("d-none");
+            // Add warn message here
+            alert.innerText = "No option selected";
+          } else if (type === "danger") {
+            alert.classList.add("alert-danger");
+            alert.classList.remove("d-none");
+            // Add failed message here
+            alert.innerText = "Error sending data to Mixpanel";
+          }
+        }
+
+        function getUserUUID() {
+          // Check if a UUID is already stored in localStorage
+          const storedUUID = localStorage.getItem("userUUID");
+
+          if (storedUUID) {
+            // If a UUID is found, return it
+            return storedUUID;
+          } else {
+            // If no UUID is found, generate a new one
+            const generatedUUID = generateUUID();
+
+            // Store the generated UUID in localStorage
+            localStorage.setItem("userUUID", generatedUUID);
+
+            // Return the generated UUID
+            return generatedUUID;
+          }
+        }
+
+        function generateUUID() {
+          const crypto = window.crypto || window.msCrypto;
+
+          if (!crypto || !crypto.getRandomValues) {
+            return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
+              /[xy]/g,
+              function (c) {
+                const r = (Math.random() * 16) | 0,
+                  v = c === "x" ? r : (r & 0x3) | 0x8;
+                return v.toString(16);
+              }
+            );
+          }
+
+          const buffer = new Uint16Array(8);
+          crypto.getRandomValues(buffer);
+          buffer[3] = (buffer[3] & 0x0fff) | 0x4000;
+          buffer[4] = (buffer[4] & 0x3fff) | 0x8000;
+
+          return (
+            buffer[0].toString(16) +
+            buffer[1].toString(16) +
+            "-" +
+            buffer[2].toString(16) +
+            "-" +
+            buffer[3].toString(16) +
+            "-" +
+            buffer[4].toString(16) +
+            "-" +
+            buffer[5].toString(16) +
+            buffer[6].toString(16) +
+            buffer[7].toString(16)
+          );
+        }
+      });
+    </script>
+    <div class="modal-backdrop show"></div>
+  </body>
+</html>
